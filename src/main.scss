@@ -1,0 +1,86 @@
+@import '@/lib/reset.scss';
+
+html, body, #root, .container{
+  @include rect(100%, 100%)
+}
+.container {
+  @include flexbox();
+  @include flex-direction(column);
+  .box {
+    @include flex();
+    @include rect(100%, auto);
+    @include flexbox();
+    @include flex-direction(column);
+    .header {
+      @include rect(100%, .44rem);
+      @include background-color(#005aaa);
+      @include text-color(#fff)
+    }
+    .content {
+      overflow: auto;
+      @include flex();
+      @include rect(100%, auto);
+      .prolist {
+        @include rect(100%, 100%);
+        li{
+          float: left;
+          @include margin (.1rem 0 0 2%);
+          @include rect(47%, 3rem);
+          @include text-color(#333);
+          @include background-color(rgb(246, 241, 241));
+          img {
+            @include rect(100%, 2rem)
+          }
+          span {
+            font-weight: 700;
+            line-height: .3rem;
+          }
+          p {
+            font-size: .12rem;
+            line-height: .24rem;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    @include rect(100%, .5rem);
+    ul {
+      @include rect(100%, .5rem);
+      @include flexbox();
+      @include justify-content();
+      @include align-items();
+      li {
+        @include flex();
+        @include rect(100%, 100%);
+        @include flexbox();
+        @include background-color(#efefef);
+        a {
+          @include flexbox();
+          @include rect(100%, 100%);
+          @include flex-direction(column);
+          @include justify-content();
+          @include align-items();
+          @include text-color(#333);
+          @include font-size(.12rem);
+          &.active {
+            @include flexbox();
+            @include rect(100%, 100%);
+            @include flex-direction(column);
+            @include justify-content();
+            @include align-items();
+            @include text-color(#005aaa);
+            p {
+              @include text-color(#005aaa);
+              @include font-size(.12rem)
+            }
+            span {
+              @include font-size(.24rem)
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
