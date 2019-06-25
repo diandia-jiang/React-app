@@ -1,0 +1,100 @@
+@import '@/lib/reset.scss';
+* {
+  touch-action: pan-y;
+}
+html, body, #root, .container{
+  @include rect(100%, 100%)
+}
+.container {
+  @include flexbox();
+  @include flex-direction(column);
+  .box {
+    @include background-color(#fff);
+    @include flex();
+    @include rect(100%, auto);
+    @include flexbox();
+    @include flex-direction(column);
+    @include padding(.22rem .31rem 0 .34rem);
+
+    .header-user {
+      @include rect(100%,.61rem);
+      .iconleft {
+        @include font-size(.5rem);
+      }
+    }
+    .content-user {
+      p {
+        font:.31rem/.51rem "";
+        @include margin(1.7rem 0 0 .7rem);
+      }
+      form {
+        @include margin(1.57rem 0 0 0);
+        .tel {
+          @include flexbox();
+          border-bottom: 1px solid #a5a5a5;
+          justify-content: space-between;
+          input {
+            border: 0;
+            @include rect(100%,1.18rem);
+              font:.26rem/.93rem "";
+              color: #999999;
+              @include margin(0 .48rem 0 .72rem);
+          }
+          button {
+            font: .26rem/.93rem "";
+            border: 0;
+            background: none;
+            @include rect(auto,100%);
+            margin-right:.48rem;
+            margin-top:.2rem;
+          }
+          .num {
+            @include rect(61%,1.18rem);
+            @include margin(0 0 0 .72rem);
+
+          }
+        }
+        
+      }
+      .login-button{
+        @include padding(0 .54rem 0 .54rem);
+        .login {
+          @include margin(.92rem 0 0 0);
+          @include rect(100%,auto);
+          text-align: center;
+          background: #3d3939;
+          color: #fff;
+          font: .26rem/.8rem "";
+          border-radius: .3rem;
+        }
+        span {
+          text-align: center;
+          display: block;
+          font: .26rem/.46rem "";
+          margin-top: .46rem;
+          color: #d6d6d6;
+        }
+      }
+      .login-other {
+        @include rect(100%,auto);
+        @include flexbox();
+        justify-content: center;
+        font: .24rem/.73rem "";
+        color: #d9d9d9;
+        margin-top: 1.52rem;
+       i {
+         display: block;
+         width: 1.07rem;
+         height: .02rem;
+         background: #707070;
+         margin: .35rem .30rem;
+       }   
+      }
+      .agreement {
+          text-align: center;
+          font: .22rem/1.17rem "";
+          color: #d9d9d9;
+      }
+    }
+  }
+}
