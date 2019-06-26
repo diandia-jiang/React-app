@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Toast } from 'antd-mobile';
+import './login.scss';
 class UI extends React.Component {
   constructor (props) {
     super(props)
@@ -57,7 +58,8 @@ class UI extends React.Component {
   }
   render () {
     return (
-      <div className = "box">
+      <div className="container">
+        <div className = "box">
         <header className="header-user" ><span className = "iconfont iconleft"></span></header>
         <div className="content-user">
           <p>你好，欢迎来到柚家</p>
@@ -77,6 +79,8 @@ class UI extends React.Component {
           </div>
         </div>
       </div>
+      </div>
+      
     )
   }
 }

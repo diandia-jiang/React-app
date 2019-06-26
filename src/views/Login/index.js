@@ -1,8 +1,8 @@
 // 链接UI组件
-import { connect } from 'react-redux'
-import { home } from '@/api'
-import axios from 'axios'
-import UI from './UI'
+import { connect } from 'react-redux';
+import { home } from '@/api';
+import axios from 'axios';
+import UI from './UI';
 
 const mapStateToProps = (state) => ({
   homeBannerList: state.home.homeBannerList,
